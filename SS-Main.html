@@ -242,6 +242,7 @@
         
         <!-- YouTube player will be created here -->
         <div id="player" class="youtube-player"></div>
+        <button id="unmuteButton" class="button" style="display: none;">Unmute Video</button>
     </div>
 
     <script>
@@ -262,7 +263,8 @@
                     'autoplay': 1, // Autoplay the video
                     'controls': 1, // Show controls
                     'showinfo': 0, // Hide video title and uploader
-                    'rel': 0 // Do not show related videos at the end
+                    'rel': 0, // Do not show related videos at the end
+                    'mute': 1 // Mute the video for autoplay to work
                 },
                 events: {
                     'onReady': function(event) {
@@ -278,9 +280,16 @@
                 document.getElementById("hiddenScreen").style.display = "none";  
                 document.getElementById("content").style.display = "block";    
                 onYouTubeIframeAPIReady(); // Initialize the YouTube player
+                document.getElementById("unmuteButton").style.display = "block"; // Show unmute button
             } else {
                 alert("INVALID CLEARANCE CODE");
             }
+        });
+
+        // Unmute the video on button click
+        document.getElementById("unmuteButton").addEventListener("click", function() {
+            player.unMute(); // Unmute the video
+            this.style.display = "none"; // Hide the unmute button
         });
     </script>
 
