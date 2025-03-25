@@ -137,8 +137,8 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             border: 2px solid #00ff00;
-            autoplay: True;
-            loop: True;
+            autoplay; 
+            loop; 
         }
 
         .content h1, .content video {
@@ -242,9 +242,9 @@
         <h1>CLASSIFIED DOCUMENTS</h1>
         <p class="warning">WARNING: CLASSIFIED DOCUMENTS CONTAINED WITHIN. AUTHORIZED PERSONNEL ONLY.</p>
         
-       
-        <video controls>
-            <source src="SS.mp4" type="video/mp4" autoplay="true">
+        
+        <video id="myVideo" controls autoplay loop>
+            <source src="SS.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -255,6 +255,7 @@
             if (clearanceCode === "TS") {
                 document.getElementById("hiddenScreen").style.display = "none";  
                 document.getElementById("content").style.display = "block";    
+                document.getElementById("myVideo").play(); 
             } else {
                 alert("INVALID CLEARANCE CODE");
             }
