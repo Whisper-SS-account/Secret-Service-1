@@ -131,16 +131,15 @@
             animation-delay: 2s;
         }
 
-        .content video {
+        .content iframe {
             width: 100%;
             height: 450px;
-            max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             border: 2px solid #00ff00;
         }
 
-        .content h1, .content video {
+        .content h1, .content iframe {
             animation: glow 1.5s ease-in-out infinite alternate;
         }
 
@@ -241,12 +240,8 @@
         <h1>CLASSIFIED DOCUMENTS</h1>
         <p class="warning">WARNING: CLASSIFIED DOCUMENTS CONTAINED WITHIN. AUTHORIZED PERSONNEL ONLY.</p>
         
-        <!-- Video displayed using the <video> tag -->
-        <video controls class="video" id="video">
-            <source src="SS.mp4" type="video/mp4">
-            <source src="https://www.youtube.com/watch?v=BBJa32lCaaY&pp=ygUJcmljayByb2xs" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
+       
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/BBJa32lCaaY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <script>
