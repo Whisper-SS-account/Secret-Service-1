@@ -264,7 +264,7 @@
                     'controls': 1, // Show controls
                     'showinfo': 0, // Hide video title and uploader
                     'rel': 0, // Do not show related videos at the end
-                    'mute': 1 // Mute the video for autoplay to work
+                    
                 },
                 events: {
                     'onReady': function(event) {
@@ -286,11 +286,7 @@
             }
         });
 
-        // Unmute the video on button click
-        document.getElementById("unmuteButton").addEventListener("click", function() {
-            player.unMute(); // Unmute the video
-            this.style.display = "none"; // Hide the unmute button
-        });
+      
     </script>
 
 </body>
