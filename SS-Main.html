@@ -260,7 +260,6 @@
                 videoId: 'BBJa32lCaaY',
                 playerVars: {
                     'autoplay': 1, // Autoplay the video
-                
                     'controls': 1, // Show controls
                     'showinfo': 0, // Hide video title and uploader
                     'rel': 0 // Do not show related videos at the end
@@ -278,6 +277,7 @@
             if (clearanceCode === "TS") {
                 document.getElementById("hiddenScreen").style.display = "none";  
                 document.getElementById("content").style.display = "block";    
+                onYouTubeIframeAPIReady(); // Initialize the YouTube player
             } else {
                 alert("INVALID CLEARANCE CODE");
             }
