@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLASSIFIED DOCUMENTS</title>
     <style>
-       
         body {
             margin: 0;
             padding: 0;
@@ -20,7 +19,6 @@
             text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
         }
 
-        
         .hidden-screen {
             position: absolute;
             width: 100%;
@@ -50,7 +48,6 @@
             }
         }
 
-   
         .button {
             background-color: #00ff00;
             color: black;
@@ -89,7 +86,6 @@
             box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
         }
 
-        
         .hidden-screen p {
             animation: typing 4s steps(40) 1s 1 normal both;
             white-space: nowrap;
@@ -110,7 +106,6 @@
             }
         }
 
-      
         .content {
             display: none;
             text-align: center;
@@ -136,18 +131,16 @@
             animation-delay: 2s;
         }
 
-        
-        .content video {
+        .content iframe {
             width: 100%;
-            height: auto;
+            height: 450px;
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             border: 2px solid #00ff00;
         }
 
-      
-        .content h1, .content video {
+        .content h1, .content iframe {
             animation: glow 1.5s ease-in-out infinite alternate;
         }
 
@@ -160,7 +153,6 @@
             }
         }
 
-       
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -174,7 +166,6 @@
             background: blue;
         }
 
-        
         .warning {
             font-size: 18px;
             color: #ff0000;
@@ -185,7 +176,6 @@
             animation-delay: 2.5s;
         }
 
-      
         .auth-required {
             font-size: 24px;
             color: #00ff00;
@@ -196,7 +186,6 @@
             animation-delay: 1s;
         }
 
-     
         .input-field {
             padding: 10px;
             font-size: 24px;
@@ -213,7 +202,6 @@
             animation-delay: 1.5s;
         }
 
-        
         .auth-message {
             position: relative; 
             width: 100%;
@@ -253,11 +241,11 @@
         <h1>CLASSIFIED DOCUMENTS</h1>
         <p class="warning">WARNING: CLASSIFIED DOCUMENTS CONTAINED WITHIN. AUTHORIZED PERSONNEL ONLY.</p>
         
-         <embed type="video/webm" src="https://www.youtube.com/watch?v=f_WuRfuMXQw&pp=ygUJcmljayByb2xs0gcJCb0Ag7Wk3p_U"> 
+        <!-- YouTube video displayed with iframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/f_WuRfuMXQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <script>
-      
         document.getElementById("revealButton").addEventListener("click", function() {
             var clearanceCode = document.getElementById("clearanceCode").value;
             if (clearanceCode === "TS") {
